@@ -32,7 +32,7 @@ export function DeleteInvoice({ id }: { id: string }) {
   const initialState: State = { message: null, errors: {} }
   const deleteInvoiceWithId = deleteInvoice.bind(null, id)
 
-  const [_, formAction] = useActionState(deleteInvoiceWithId, initialState)
+  const [, formAction] = useActionState(deleteInvoiceWithId, initialState)
   return (
     <form action={formAction}>
       <button className="rounded-md border p-2 hover:bg-gray-100">
